@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Money4you</title>
+<meta name="description" content="What data Money4you collects, why, and where it goes." />
+<style>
+  :root {
+    --bg: #F7F8F4;
+    --paper: #FFFFFF;
+    --ink: #1B2320;
+    --ink-muted: #5B6660;
+    --ink-faint: #8B948D;
+    --border: #E2E5DE;
+    --accent: #2F6B4F;
+    --accent-ink: #1F4A37;
+    --accent-soft: #DCEAE1;
+    --cloud: #3D5A73;
+    --cloud-soft: #DCE6ED;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101512;
+      --paper: #161C18;
+      --ink: #E9ECE7;
+      --ink-muted: #9AA79E;
+      --ink-faint: #6C776F;
+      --border: #262F29;
+      --accent: #63B189;
+      --accent-ink: #9FD6B9;
+      --accent-soft: #1B2B22;
+      --cloud: #8FB2CC;
+      --cloud-soft: #1B2731;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+  }
+
+  .doc {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  @media (max-width: 600px) {
+    .doc { padding: 36px 18px 72px; }
+  }
+
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    background: var(--accent-soft);
+    border-radius: 100px;
+    padding: 6px 12px 6px 10px;
+  }
+  .mark svg { width: 13px; height: 13px; flex: none; }
+
+  h1 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin: 20px 0 10px;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+
+  .meta {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+
+  .lede {
+    max-width: 62ch;
+    color: var(--ink-muted);
+    font-size: 16.5px;
+    margin: 22px 0 0;
+  }
+
+  .glance {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 36px 0 8px;
+  }
+  @media (max-width: 640px) {
+    .glance { grid-template-columns: repeat(2, 1fr); }
+  }
+  .glance-item { background: var(--paper); padding: 18px 16px; }
+  .glance-item .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.03em;
+  }
+  .glance-item .label { margin-top: 6px; font-size: 14px; color: var(--ink); font-weight: 600; }
+  .glance-item .sub { margin-top: 2px; font-size: 12.5px; color: var(--ink-faint); }
+
+  nav.toc {
+    margin: 40px 0 48px;
+    padding: 18px 22px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--paper);
+  }
+  nav.toc .toc-label {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 10px;
+  }
+  nav.toc ol { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 28px; }
+  @media (max-width: 560px) { nav.toc ol { columns: 1; } }
+  nav.toc li { break-inside: avoid; margin-bottom: 7px; }
+  nav.toc a {
+    color: var(--ink-muted);
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  nav.toc a:hover { color: var(--accent-ink); border-color: var(--accent); }
+  nav.toc a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+  section { margin: 52px 0; scroll-margin-top: 24px; }
+  section > h2 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--ink);
+    margin: 0 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    text-wrap: balance;
+  }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink); margin: 0 0 6px; }
+  p { max-width: 66ch; color: var(--ink); margin: 0 0 12px; }
+  section p:last-child { margin-bottom: 0; }
+  .muted { color: var(--ink-muted); }
+
+  ul.plain { margin: 0; padding-left: 20px; max-width: 66ch; }
+  ul.plain li { margin-bottom: 8px; color: var(--ink); }
+  ul.plain li:last-child { margin-bottom: 0; }
+
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    background: var(--paper);
+    margin-bottom: 14px;
+  }
+  .card:last-child { margin-bottom: 0; }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+  .pill {
+    flex: none;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    letter-spacing: 0.03em;
+    padding: 4px 9px;
+    border-radius: 100px;
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+  .pill-local { background: var(--accent-soft); color: var(--accent-ink); }
+  .pill-cloud { background: var(--cloud-soft); color: var(--cloud); }
+
+  .field { display: grid; grid-template-columns: 72px 1fr; gap: 4px 14px; margin-top: 12px; }
+  .field dt {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding-top: 2px;
+  }
+  .field dd { margin: 0 0 10px; color: var(--ink-muted); font-size: 14.5px; }
+  .field dd:last-child { margin-bottom: 0; }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 4px; }
+  @media (max-width: 620px) { .split { grid-template-columns: 1fr; } }
+
+  ul.checks { list-style: none; margin: 0; padding: 0; }
+  ul.checks li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--ink);
+    font-size: 15px;
+  }
+  ul.checks li:last-child { border-bottom: none; }
+  ul.checks svg { flex: none; margin-top: 3px; color: var(--accent); }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  footer .contact { font-size: 14.5px; color: var(--ink-muted); }
+  footer .contact a { color: var(--accent-ink); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  footer .contact a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  footer .stamp { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11.5px; color: var(--ink-faint); }
+
+  a { color: var(--accent-ink); }
+  ::selection { background: var(--accent-soft); color: var(--accent-ink); }
+</style>
+</head>
+<body>
+<div class="doc">
+
+  <span class="mark">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5z"/></svg>
+    Money4you
+  </span>
+
+  <h1>Privacy Policy</h1>
+  <div class="meta">Last updated 2026-07-23</div>
+
+  <p class="lede">This describes what data Money4you collects, why, and where it goes — written
+  plainly enough to double as the source document for Google Play's Data Safety form. The short
+  version: your financial data never leaves your phone unless you explicitly choose to.</p>
+
+  <div class="glance">
+    <div class="glance-item">
+      <div class="num">→ device</div>
+      <div class="label">Stored locally</div>
+      <div class="sub">Room database, on-device</div>
+    </div>
+    <div class="glance-item">
+      <div class="num">$0</div>
+      <div class="label">Never sold</div>
+      <div class="sub">No data brokers, ever</div>
+    </div>
+    <div class="glance-item">
+      <div class="num">0</div>
+      <div class="label">No ads or tracking</div>
+      <div class="sub">No analytics SDKs</div>
+    </div>
+    <div class="glance-item">
+      <div class="num">opt‑in</div>
+      <div class="label">AI chat</div>
+      <div class="sub">Your own Gemini key</div>
+    </div>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-label">Contents</div>
+    <ol>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#account">Account data</a></li>
+      <li><a href="#financial">Financial data</a></li>
+      <li><a href="#assistant">AI assistant</a></li>
+      <li><a href="#notifications">Notifications</a></li>
+      <li><a href="#appcheck">App Check</a></li>
+      <li><a href="#not-collected">What we don't collect</a></li>
+      <li><a href="#deletion">Data deletion</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="summary">
+    <h2>Summary</h2>
+    <p>Money4you is a personal budgeting app. Your financial data — accounts, categories,
+    transactions, budgets, reminders — is stored locally on your device in a private database.
+    It is not sold, and it is not used for advertising. The only places your data leaves your
+    device are:</p>
+    <ul class="plain">
+      <li><strong>Firebase Authentication</strong>, to sign you in.</li>
+      <li><strong>Google Gemini</strong>, but only if you choose to connect your own free Gemini
+      API key and use the free-form chat. Every other part of the AI assistant — ready-made
+      questions, spending insights, tips — runs entirely on-device and sends nothing anywhere.</li>
+    </ul>
+  </section>
+
+  <section id="account">
+    <h2>Data we collect</h2>
+
+    <div class="card">
+      <div class="card-head">
+        <h3>Account data</h3>
+        <span class="pill pill-cloud">Sent to Firebase</span>
+      </div>
+      <dl class="field">
+        <dt>What</dt>
+        <dd>Email address, and if you sign in with Google, your Google account's basic profile
+        (name, email, profile photo URL).</dd>
+        <dt>Why</dt>
+        <dd>To create and authenticate your account, and keep your data separated from other
+        users' data.</dd>
+        <dt>Where</dt>
+        <dd>Firebase Authentication (Google). Not shared with any other third party.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="financial">
+    <div class="card">
+      <div class="card-head">
+        <h3>Financial data</h3>
+        <span class="pill pill-local">On-device only</span>
+      </div>
+      <p class="muted" style="margin-bottom: 12px; font-size: 14.5px;">Accounts, income sources,
+      categories, transactions, budgets, debts, tags, payment reminders.</p>
+      <dl class="field">
+        <dt>What</dt>
+        <dd>Everything you enter into the app — account names and balances, category
+        names/icons/budgets, transaction amounts/dates/notes, debt records, tags, and payment
+        reminders you create.</dd>
+        <dt>Why</dt>
+        <dd>This is the core function of the app — tracking your finances.</dd>
+        <dt>Where</dt>
+        <dd>Stored only in a local Room (SQLite) database on your device. Money4you has no
+        backend of its own to upload it to.</dd>
+        <dt>Backup</dt>
+        <dd>Settings → Data → "Export backup" writes this same data to a file you choose (e.g.
+        via Android's file picker, which may save to local storage or a cloud app you control).
+        We don't control where you save it or who you share it with afterward.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="assistant">
+    <h2>AI assistant</h2>
+    <p class="muted">Two independent parts, very different data handling — only one of them
+    ever sends anything off your device.</p>
+    <div class="split">
+      <div class="card">
+        <div class="card-head">
+          <h3>Ready-made questions</h3>
+          <span class="pill pill-local">On-device</span>
+        </div>
+        <p style="font-size: 14.5px;">Tapping a suggested question ("How much did I spend on
+        groceries?", spending by category, budgeting tips), plus everything else in the
+        Assistant tab — trend pills, subscription detection, savings-goal progress — is computed
+        entirely on-device. Nothing is sent anywhere. Works with no setup.</p>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <h3>Free-form chat</h3>
+          <span class="pill pill-cloud">Sent to Google, opt-in</span>
+        </div>
+        <p style="font-size: 14.5px;">Only works if you paste your own Gemini API key
+        (aistudio.google.com), stored solely in the app's local settings — we never see it. Each
+        message calls Gemini directly with your key, including a snapshot of your balances,
+        budgets and recent transactions. This never passes through a server of ours; it's billed
+        to your own key, and retention follows Google's Gemini API terms.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="notifications">
+    <div class="card">
+      <div class="card-head">
+        <h3>Notifications</h3>
+        <span class="pill pill-local">On-device</span>
+      </div>
+      <p style="font-size: 14.5px; margin: 0;">Payment reminders you create are scheduled locally
+      via Android's WorkManager and trigger a local notification on your device. No reminder
+      data is sent anywhere.</p>
+    </div>
+  </section>
+
+  <section id="appcheck">
+    <div class="card">
+      <div class="card-head">
+        <h3>App Check / Play Integrity</h3>
+        <span class="pill pill-cloud">Device signal only</span>
+      </div>
+      <p style="font-size: 14.5px; margin: 0;">On release builds, the app uses Firebase App
+      Check (Play Integrity) to prove sign-in requests come from a genuine, unmodified install.
+      This exchanges device integrity signals with Google Play Services — it does not send your
+      financial data, and it's unrelated to the AI assistant, which no longer goes through
+      Firebase at all.</p>
+    </div>
+  </section>
+
+  <section id="not-collected">
+    <h2>What we don't collect</h2>
+    <ul class="checks">
+      <li>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        No advertising identifiers, ad SDKs, or analytics/tracking SDKs
+      </li>
+      <li>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        No location data
+      </li>
+      <li>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        No contacts, camera, microphone, or SMS access
+      </li>
+      <li>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        No sale of data to third parties, ever
+      </li>
+    </ul>
+  </section>
+
+  <section id="deletion">
+    <h2>Data deletion</h2>
+    <ul class="plain">
+      <li>Deleting the app removes all locally stored financial data immediately — it lives only
+      in the app's local database.</li>
+      <li>To delete your sign-in account, email
+      <a href="mailto:vitalijvivanov@gmail.com?subject=Delete%20my%20Money4you%20account">vitalijvivanov@gmail.com</a>
+      with the subject "Delete my account" from the address you signed up with. Your Firebase
+      Authentication account and any associated data will be deleted within 30 days, and we'll
+      confirm by email once it's done.</li>
+    </ul>
+  </section>
+
+  <section id="children">
+    <h2>Children's privacy</h2>
+    <p>Money4you is not directed at children and is not intended for use by anyone under the
+    age of 13.</p>
+  </section>
+
+  <section id="changes">
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the "Last updated" date above will be revised. The app has no
+    backend of its own, so we can't push in-app policy notifications — check this page for the
+    latest version.</p>
+  </section>
+
+  <footer id="contact">
+    <div class="contact">Privacy questions or data-deletion requests:
+      <a href="mailto:vitalijvivanov@gmail.com">vitalijvivanov@gmail.com</a>
+    </div>
+    <div class="stamp">money4you · privacy · v2026-07-23</div>
+  </footer>
+
+</div>
+</body>
+</html>
