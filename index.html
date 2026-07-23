@@ -430,15 +430,48 @@
 
   <section id="deletion">
     <h2>Data deletion</h2>
-    <ul class="plain">
-      <li>Deleting the app removes all locally stored financial data immediately — it lives only
-      in the app's local database.</li>
-      <li>To delete your sign-in account, email
-      <a href="mailto:vitalijvivanov@gmail.com?subject=Delete%20my%20Money4you%20account">vitalijvivanov@gmail.com</a>
-      with the subject "Delete my account" from the address you signed up with. Your Firebase
-      Authentication account and any associated data will be deleted within 30 days, and we'll
-      confirm by email once it's done.</li>
-    </ul>
+    <p class="muted">Two ways to delete data in Money4you, depending on whether you want to keep
+    your account.</p>
+
+    <div class="card" id="delete-data">
+      <div class="card-head">
+        <h3>Delete some of your data (keep your account)</h3>
+        <span class="pill pill-local">In-app, instant</span>
+      </div>
+      <dl class="field">
+        <dt>Steps</dt>
+        <dd>In Money4you, go to <strong>Profile → Settings → Danger zone → Delete all
+        transactions</strong>, then confirm.</dd>
+        <dt>Deletes</dt>
+        <dd>All of your transaction history, permanently and immediately — this can't be
+        undone.</dd>
+        <dt>Keeps</dt>
+        <dd>Your sign-in account, categories, accounts, and budgets. Balances reset to zero.</dd>
+        <dt>Retention</dt>
+        <dd>None — deletion is immediate, there's no backend copy to retain.</dd>
+      </dl>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h3>Delete your account and all data</h3>
+        <span class="pill pill-cloud">Email request, 30 days</span>
+      </div>
+      <dl class="field">
+        <dt>Steps</dt>
+        <dd>Email
+        <a href="mailto:vitalijvivanov@gmail.com?subject=Delete%20my%20Money4you%20account">vitalijvivanov@gmail.com</a>
+        with the subject "Delete my account", sent from the address you signed up with.</dd>
+        <dt>Deletes</dt>
+        <dd>Your Firebase Authentication sign-in account and any data associated with it that we
+        hold. Uninstalling the app additionally erases all financial data stored locally on your
+        device immediately, since Money4you keeps no server-side copy of it.</dd>
+        <dt>Keeps</dt>
+        <dd>Nothing — this is a full deletion.</dd>
+        <dt>Retention</dt>
+        <dd>Processed within 30 days; we confirm by email once it's done.</dd>
+      </dl>
+    </div>
   </section>
 
   <section id="children">
